@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Gradient Color Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="icon" href="img/paleta.png" type="image/x-icon">
+</head>
+<body>
+  <div class="container-fluid">
+    <!-- title of the website -->
+    <h1 class="text-center w-100 my-3 py-2 title">Generate a CSS Color Gradient</h1>
+  </div>
+
+  <div class="row d-flex m-0 justify-content-center my-2 ml-3">
+    <form action="">
+      <fieldset class="my-4">
+        <label for="menu" class="mb-3 subtitulo">Orientation:</label> <br/>
+        <select name="menu" class="menu-orientation px-5 py-2 mr-3" id="menu">
+          <option value="to right top" selected>To right top</option>
+          <option value="to right">To right</option>
+          <option value="to bottom">To bottom</option>
+          <option value="to left bottom">To left bottom</option>
+          <option value="to left">To left</option>
+          <option value="to left top">To left top</option>
+          <option value="to top">To top</option>
+          <option value="circle">Circle</option>
+        </select>
+      </fieldset>
+       
+      <fieldset>
+        <label for="menu" class="mb-3 subtitulo">Colors:</label>
+        <input type="color" name="color1" id="color1" class="ml-4" value="#ffa4dc">
+        <input type="color" name="color2" id="color2" class="ml-1" value="#5f85f2">
+      </fieldset>
+      <input type="submit" class="btn-lg px-5 py-2 mx-4 mt-3 rounded-pill boton" id="btn" value="Generate Gradient">
+    </form>
+  </div>
+      
+  <div class="row d-flex m-0 justify-content-center my-2">
+      
+    <div class="mt-4 result">  
+      <span class="mr-5 letter-box-code">CSS Code:</span><span class="btn-sm btn-info pointer" onclick="copy();">Copy!</span>
+      <pre class="mt-2 box-code flex-wrap" id="text-code"> background-image: linear-gradient(to right, #ffa4dc, #e798e3);</pre>
+    </div> 
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
